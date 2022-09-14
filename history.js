@@ -14,11 +14,10 @@ function addHistory(questionText, timeTaken, errorCount) {
 
   histories.appendChild(newRow);
 
+  let previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
+  previousTests.push({ questionText, timeTaken, errorCount });
   localStorage.setItem("testHistory", JSON.stringify(previousTests));
 
-  previousTests.push({ questionText, timeTaken, errorCount });
-
-  previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
   displayHistory();
 }
 

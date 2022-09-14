@@ -135,5 +135,5 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
   const roundTime = parseInt(timeSpent);
 
-  document.getElementById("show-time").innerHTML = `${parseInt(startTime) ? roundTime : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${(startTime) ? roundTime : 0} seconds`;
 }, 1000);
