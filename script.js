@@ -89,7 +89,7 @@ const gameOver = () => {
 
   // restart everything
   startTime = null;
-  errorCount = 0;
+  errorCount = '';
   userText = "";
   display.classList.add("inactive");
 };
@@ -107,7 +107,7 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
     if (count == 0) {
